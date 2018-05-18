@@ -9,7 +9,7 @@
       "48": "img/icon48.png"
     },
 
-    "background": { "scripts": ["hot-reload.js"] },
+    "background": { "scripts": ["content_scripts/hot-reload.js"] },
 
     "permissions": [
       "activeTab"

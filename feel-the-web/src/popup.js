@@ -49,7 +49,7 @@ function reportExecuteScriptError(error) {
 }
 
 // Inject webextention polyfill for chrome support
-browser.tabs.executeScript({file: "webextension-polyfill/dist/browser-polyfill.js"});
+browser.tabs.executeScript({file: "/src/browser-polyfill.js"});
 
 // Inject JS into tab and adds click listener and catches errors
 browser.tabs.executeScript({file: "/content_scripts/analyze.js"})
