@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Feel the Web",
+    "version": "1.0",
+  
+    "description": "Adds a button to your toolbar that applies NLP-based sentiment analysis on any webpage",
+    "homepage_url": "https://github.com/myisaak/feel-the-web",
+    "icons": {
+      "48": "img/icon48.png"
+    },
+
+    "background": { "scripts": ["hot-reload.js"] },
+
+    "permissions": [
+      "activeTab"
+    ],
+  
+    "browser_action": {
+      "default_icon": "img/icon32.png",
+      "default_title": "Feel the Web",
+      "default_popup": "src/popup.html"
+    }
+}
