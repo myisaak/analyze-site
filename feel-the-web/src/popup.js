@@ -7,7 +7,7 @@ function listenForClicks() {
     document.addEventListener("click", (e) => {
 
         // Inject CSS and broadcasts 'analyze' message
-        function beastify(tabs) {
+        function analyze(tabs) {
             browser.tabs.insertCSS({code: cssCode}).then(() => {
                 browser.tabs.sendMessage(tabs[0].id, {
                     command: "analyze"
@@ -47,6 +47,9 @@ function reportExecuteScriptError(error) {
     document.querySelector("#error-content").classList.remove("hidden");
     console.error(`Failed to execute analyze content script: ${error.message}`);
 }
+
+// Load Google Cloud API client
+browser.tabs.executeScript({file: "/content_scripts/api.js"});
 
 // Inject webextention polyfill for chrome support
 browser.tabs.executeScript({file: "/src/browser-polyfill.js"});
