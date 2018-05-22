@@ -7,6 +7,24 @@
 
 Feel-the-web is a free cross-platform browser extension allows marketers and students to view, or 'feel', sentiments from websites. It highlights all positive in green, neutral in yellow and negative in red, directly on the webpage itself.
 
+### Setup
+
+#### 1. You need to clone this GitHub repo *with submodules* so run the following:
+
+`git clone --recurse-submodules -j8 <repo link>` where `<repo link>` is replaced with any of the two links below: 
+ - `https://github.com/MyIsaak/feel-the-web.git`
+ - `git@github.com:MyIsaak/feel-the-web.git`
+
+#### 2. Then load the feel-the-web folder onto your web browser
+> Note: Don't mistake `feel-the-web/` (incorrect) with `feel-the-web/feel-the-web/` (correct) when loading the plugin onto the browser. Any plugin must have a `manifest.json` in it's base directory.
+
+- For Chrome, you can go to "chrome://extensions" and enable "Developer Mode" then select "Load Unpacked"
+- For Firefox, you can enter "about:debugging" in the URL bar and click "Load Temporary Add-on"
+
+### Development
+
+A hot reload script is added for facilitating the developent cycle, since some browsers don't update and require you reload or refresh the plugin manually (especially when packed). It serves as a watchdog for file changes and immediately refreshes the browser. Will be removed on published builds.
+
 ### What is sentiment analysis?
 
 The process of computationally identifying and categorizing opinions expressed in a piece of text, especially in order to determine whether the writer's attitude towards a particular topic, product, etc. is positive, negative, or neutral.
