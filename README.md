@@ -9,13 +9,23 @@ Feel-the-web is a free cross-platform browser extension allows marketers and stu
 
 ### Setup
 
+- Required dependencies: `Node` and `NPM`
+- Optional dependency: `crxmake`
+
 #### 1. You need to clone this GitHub repo *with submodules* so run the following:
 
 `git clone --recurse-submodules -j8 <repo link>` where `<repo link>` is replaced with any of the two links below: 
  - `https://github.com/MyIsaak/feel-the-web.git`
  - `git@github.com:MyIsaak/feel-the-web.git`
+ 
+#### 2. Run the install.sh from base directory
+> Note: For Windows users I recommend copying the `browser-polyfill.js` file located in `webextension-polyfill/dist/` to `feel-the-web/src/`, assuming you're locating from base repo directory.
 
-#### 2. Then load the feel-the-web folder onto your web browser
+Perhaps you don't have permission to execute `install.sh`, in this case try running `chmod +x install.sh`
+
+`crxmake` is an optional dependency if you wish to pack the plugin
+
+#### 3. Then load the feel-the-web folder onto your web browser
 > Note: Don't mistake `feel-the-web/` (incorrect) with `feel-the-web/feel-the-web/` (correct) when loading the plugin onto the browser. Any plugin must have a `manifest.json` in it's base directory.
 
 - For Chrome, you can go to "chrome://extensions" and enable "Developer Mode" then select "Load Unpacked"
